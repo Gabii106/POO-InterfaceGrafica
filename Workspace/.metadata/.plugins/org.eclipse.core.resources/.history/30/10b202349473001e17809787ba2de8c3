@@ -1,0 +1,6 @@
+package br.senai.aula_25_10;
+
+public class Task {
+	private Integer code;
+	private String description;
+}

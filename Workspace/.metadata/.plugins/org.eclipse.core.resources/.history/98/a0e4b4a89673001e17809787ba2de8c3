@@ -1,0 +1,12 @@
+package br.senai.aula_25_10;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class TaskRepository { //Repositorio - Faz a persistencia de dados - É onde pede para fazer a persistencia de dados - Persistencia = salvar, atualizar, deletar, etc
+	private static List<Task> records = new ArrayList<Task>();
+	
+	public Task findByCode(Integer code) {
+		return records.stream().filter((current) -> current.getCode().equals(code)).findFirst().orElse(null);
+	}
+}

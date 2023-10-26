@@ -1,0 +1,28 @@
+package br.senai.aula_25_10;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class TaskRepository { //Repositorio - Faz a persistencia de dados - É onde pede para fazer a persistencia de dados - Persistencia = salvar, atualizar, deletar, etc
+	private static List<Task> records = new ArrayList<Task>();
+	
+	public Task findByCode(Integer code) { //Programação funcional
+		return records.stream()
+				.filter((current) -> current.getCode().equals(code))
+				.findFirst()
+				.orElse(null);
+		
+		//Task t = null //Programação imperativa
+		//for(int i = 0; records.size; i++){
+		//	if(records.get(i).getCode().equals(code)){
+		//		t = records.get(i);
+		//		break;
+		//	}
+		//}
+		//return t;
+	}
+	
+	public List<Task> findAll(){
+		return records;
+	}
+}

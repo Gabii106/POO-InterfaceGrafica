@@ -1,0 +1,20 @@
+INDEX VERSION 1.134+C:\Eclipse\Eclipse 2023-09\Workspace\.metadata\.plugins\org.eclipse.jdt.core
+2072609831.index
+2349317086.index
+58187616.index
+1898460945.index
+1845393498.index
+914154732.index
+849709258.index
+1865797976.index
+389944820.index
+2344857545.index
+1608603105.index
+125153411.index
+507699562.index
+4094379087.index
+1901826804.index
+3047788144.index
+2326219825.index
+1193496204.index
+1307370456.index
