@@ -7,6 +7,12 @@ public class TaskRepository { //Repositorio - Faz a persistencia de dados - É o
 	private static List<Task> records = new ArrayList<Task>();
 	private static Integer nextCode = 1;
 	
+	static {
+		records.add(new Task (nextCode++, "Task 01"));
+		records.add(new Task (nextCode++, "Task 02"));
+		records.add(new Task (nextCode++, "Task 03"));
+	}
+	
 	public Task findByCode(Integer code) { //Programação funcional //Select where
 		return records.stream()
 				.filter((current) -> current.getCode().equals(code))
@@ -23,8 +29,8 @@ public class TaskRepository { //Repositorio - Faz a persistencia de dados - É o
 		//return t;
 	}
 	
-	public List<Task> findAll(){ //Select *
-		return records;
+	public List<Task> findAll(){ //Select * sem where
+		return records; 
 	}
 	
 	public void insert(Task task) {

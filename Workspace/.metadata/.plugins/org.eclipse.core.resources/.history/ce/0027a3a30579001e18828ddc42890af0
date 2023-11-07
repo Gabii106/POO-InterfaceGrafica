@@ -1,0 +1,20 @@
+package br.senai.aula_25_10;
+
+public class TaskController {
+	private Task currentTask = new Task();
+	private TaskRepository repository = new TaskRepository();
+	
+	public void changeDescription(String text) {
+		if(currentTask != null) {
+			currentTask.setDescription(text);
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}

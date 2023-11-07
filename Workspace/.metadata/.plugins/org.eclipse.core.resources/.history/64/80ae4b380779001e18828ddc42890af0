@@ -1,0 +1,47 @@
+package br.senai.aula_25_10;
+
+public class TaskController {
+	private Task currentTask = new Task();
+	private TaskRepository repository = new TaskRepository();
+	
+	public void changeDescription(String text) {
+		if(currentTask != null) {
+			currentTask.setDescription(text);
+		}
+	}
+
+	public void save() {
+		if(currentTask != null) {
+			if(currentTask.getCode() == null) {
+				repository.insert(currentTask);
+			} else {
+				repository.update(currentTask);
+			}
+		}
+		
+	}
+	
+	
+	public void delete() {
+		if(currentTask != null) {
+			repository.delete(currentTask.getCode());
+			currentTask = new Task();
+		}
+	}
+	
+	
+	public String getCode() {
+		if(currentTask != null && currentTask.getCode() != null) {
+			return currentTask.getCode().toString();
+		}
+		return "";
+	} 
+	
+	public String getDescription() {
+		if(currentTask != null && currentTask.getDescription() != null) {
+			return currentTask.getDescription().toString();
+		}
+		return "";
+	}
+	
+}
